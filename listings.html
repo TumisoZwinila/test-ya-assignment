@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terravast - All Land Listings in Botswana</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Same header as index.html (consistent across all pages) -->
+<header class="site-header">
+    <div class="container nav-container">
+        <div class="logo-area">
+            <h1 class="logo"><span class="logo-terra">TERRAVAST</span> <span class="logo-hold">HOLDINGS</span><br><span class="logo-sub">PTY LTD</span></h1>
+        </div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="listings.html" class="active">Listings</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="feedback.html">Feedback</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="listings.html" class="btn-outline">Browse Properties</a>
+                <a href="contact.html" class="btn-primary">List Your Land</a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn"><i class="bi bi-list"></i></button>
+        </nav>
+    </div>
+    <div class="mobile-nav-panel" id="mobileNavPanel">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="listings.html">Listings</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="feedback.html">Feedback</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <section class="container" style="padding: 3rem 1.5rem;">
+        <h1 style="font-size: 2rem; margin-bottom: 0.5rem;">All Land Listings</h1>
+        <p style="margin-bottom: 2rem; color: #4a5b57;">Browse verified properties across Botswana</p>
+        
+        <!-- Grid of all listings - same style as featured on homepage -->
+        <div class="listings-grid" id="allListingsGrid">
+            <!-- JavaScript will populate all listings here -->
+        </div>
+    </section>
+</main>
+
+<!-- Same footer as index.html -->
+<footer class="site-footer">
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>TERRAVAST HOLDINGS PTY LTD</h3>
+                <p>Connecting verified land buyers and sellers nationwide.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="listings.html">Listings</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="bi bi-envelope"></i> info@terravast.co.bw</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Terravast Holdings Pty Ltd.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+<script>
+    // This script populates the all listings page with the same data
+    // Wait for page to load, then render all listings
+    document.addEventListener('DOMContentLoaded', function() {
+        if(typeof listingsData !== 'undefined') {
+            renderAllListings(listingsData);
+        }
+    });
+</script>
+</body>
+</html>
